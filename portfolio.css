@@ -1,0 +1,314 @@
+:root{
+
+  --white: #f0f0f0;
+  
+  --welcome-bkg:  #303841;  /*Dark Gray*/
+  --projects-bkg: #45567d;  /*Blue*/
+  --contact-bkg:  #303841;  /*Dark Gray*/
+  --navbar-bkg:   #FFB03B;  /*Orange*/
+  --footer-bkg:   #303841;  /*Dark Gray*/
+  --tiles-bkg:  var(--navbar-bkg);
+  
+  --font-family-main:  'Montserrat', sans-serif;"
+  
+}
+
+
+/*General Reset */
+
+* {  
+  margin: 0;
+  padding: 0;
+}
+
+html{
+   box-sizing: border-box;
+   font-size: 10px;   /* This means 1 rem = 10 px */
+}
+
+
+body {
+  background-color: var(--projects-bkg);
+  color: var(--white); /*White*/
+  font-family: var(--font-family-main);
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white); /*White*/
+}
+
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+
+                          /*  NAVBAR SECTION */
+
+.nav{
+  width: 100%;
+  padding: 3rem 2rem;
+  display: flex;
+}
+
+#navbar{
+  background-color: var(--navbar-bkg);
+  justify-content: flex-start;
+  
+}
+
+#navbar li{
+  display: inline-flex;
+  padding: 0 0 0 3rem;
+  font-size: 2.5rem;
+  list-style: none;
+}
+
+#navbar a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+
+/*  WELCOME SECTION  */
+
+#welcome-section{
+  height: 100vh;
+  background-color: var(--welcome-bkg);
+  display: flex;
+  font-family: 'Lato', sans-serif;
+}
+
+section div{
+  margin: auto;  
+}
+
+section h1{
+  font-size: 4rem;
+}
+
+
+
+
+                      /*  PROJECTS SECTION  */
+
+#projects {  /* This is the complete <section>*/
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+
+.projects-section-header{
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: var(--tiles-bkg);  /*Orange*/
+  border-bottom: 0.2rem solid var(--tiles-bkg);
+  
+}
+
+
+/*  MEDIA QUERIES GO HERE  - PENDING !! */
+
+
+/* This is what sets the image grid using no media queries */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin: 7rem ;
+}
+.projects-container{
+  display: inline-flex;
+  width: 60%;
+  
+
+
+}
+.project-penguin{
+    width: 420px;
+    margin-right: 7px;
+    border: solid;
+    border-color: black;
+}
+.project-wheel{
+  margin-right: 7px;
+  border: solid;
+  border-color: black;
+}
+.project-city{
+  margin-right: 7px;
+  border: solid;
+  border-color: black;
+}
+
+
+
+
+/*  MEDIA QUERIES GO HERE  - PENDING !! */
+
+
+
+/*This in the end makes all tiles the same size*/
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  object-fit: cover;
+  width: 25%;
+  overflow: hidden;
+}
+
+
+.project-tile {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: var(--navbar-bkg); /*Orange*/
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  
+  /* This is the <a> element that contains the whole tile,  you can susbtitute .tile with "a"  */
+}
+
+
+.project-title {
+  color: var(--welcome-bkg);  /*Dark Grey*/
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+
+/*     Thingies 
+Thingies are the "<" and "/>" symbols at each side of the project-titles.
+They are the same color as the project-titles background color, therefore invisible and they change to a darker color ("projects" background) when hovered over.
+*/
+
+.thingies {
+  color: var(--tiles-bkg);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .thingies {
+  color: var(--projects-bkg);
+}
+
+
+/*  Button  & icon  */
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+
+.btn-show-more {
+  font-size: 2rem;
+  background-color: var(--welcome-bkg); /* Dark Gray */
+  transition: background 0.3s ease-out;
+  /*The last part slows-down the change of color (rule below).
+  Pending: find out why background is that funny collor*/
+}
+
+.btn-show-more:hover {
+  background: var(--tiles-bkg);  /* CHANGE COLOR !!!!!! */
+  /*The btn changes to this color when hovered*/
+}
+
+.icon {
+  font-size: 2.125rem;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+                         /* CONTACT SECTION */
+
+#contact-section{
+  background-color: var(--contact-bkg);
+  display:flex;
+}
+
+.social-logos{
+  display: inline-flex;
+  
+}
+.linkedin-logo{
+  width: 68px;
+  margin-right: 7px;
+  border: solid;
+  border-color: black;
+}
+.github-logo{
+  width: 70px;
+  margin-left: 5px;
+  border: solid;
+  border-color: black;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  width: 100%;
+  background-color: var(--footer-bkg);
+  padding: 2rem 0;
+  display: inline-flex;
+}
+
+
+
+
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+#about{
+  height:50vh;
+}
+
+#navbar{
+  position:fixed;
+}
+ 
+
+
+                       /*    FOOTER    */
+
+footer {
+  width: 100%;
+  display: flex;
+  font-weight: 300;
+  text-align: center;
+  background-color: var(--footer-bkg);
+  border-top: .25rem solid var(--navbar-bkg);
+  
+}
+
+footer div{
+  margin:auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+footer p {
+  padding: 2rem;
+}
